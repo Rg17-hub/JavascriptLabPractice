@@ -1,0 +1,22 @@
+<html>
+    <body>
+        Enter your Name: <input type="text" id="nm"><br>
+        <button onclick="name5()">Click Here</button>
+        <h1 id="h1"></h1>
+        <h2 id="h2"></h2>
+        <h3 id="h3"></h3>
+        <h4 id="h4"></h4>
+        <h5 id="h5"></h5>
+        <script>
+            function name5()
+{
+    var fnm=String(document.getElementById("nm").value);
+    document.getElementById("h1").innerHTML=fnm;
+    document.getElementById("h2").innerHTML=fnm;
+    document.getElementById("h3").innerHTML=fnm;
+    document.getElementById("h4").innerHTML=fnm;
+    document.getElementById("h5").innerHTML=fnm;
+}        
+        </script>
+    </body>
+</html>

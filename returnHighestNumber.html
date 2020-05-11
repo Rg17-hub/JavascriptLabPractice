@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+        <body>
+            
+            <h4>Program to print Highest Number.</h4>
+            <label >Enter 1st number=</label>
+            <input id="first"> <br>
+            <label >Enter 2nd number=</label>
+            <input id="second"> <br>
+            <label >Enter 3rd number=</label>
+            <input id="third"> <br><br>
+            <button onclick="highestNumber(first.value, second.value,third.value)">Click to find highest number</button>
+            <br>
+            Result:<p id="result"></p>
+            <script>
+                
+                function highestNumber(num1,num2,num3)
+                {
+                    if(num1>num2)
+                    {
+                        if(num1>num3)
+                        document.getElementById("result").innerHTML=num1;
+                        else
+                        document.getElementById("result").innerHTML=num3;
+                    }
+                
+                    else if(num2>num3)
+                    document.getElementById("result").innerHTML=num2;
+                    else
+                    document.getElementById("result").innerHTML=num3;
+                }
+                
+            </script>
+        </body>
+</html>
