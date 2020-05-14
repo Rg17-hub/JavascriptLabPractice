@@ -1,0 +1,38 @@
+task 7: Create an array having 10 numbers and display it in ascending order
+
+<html>
+    <body>
+        Your Array=
+        <p id="demo"></p>
+        <br>
+        <br>
+        <button onclick="changeOrder()">Click to arrange in ascending order</button>
+        <br><br>
+        After arranging in ascending order=
+        <br>
+        <br>
+        <p id="demo1"></p>
+        
+        <script>
+            var count = prompt("Enter array size=");
+            var arr=[];
+            
+            for(let i=0;i<count;i++)
+            {
+                arr[i]=prompt("Enter array element=");
+               document.getElementById("demo").innerHTML=arr;
+            }
+           
+            function changeOrder()
+            {
+                var result = arr.sort(function(a,b){ return a-b});
+            document.getElementById("demo1").innerHTML=result;
+
+            }
+            
+            
+            
+        </script>
+    </body>
+</html>
+

@@ -1,0 +1,24 @@
+task 3: Write your name on page but keep it hidden. 
+On button click it should unhide your name.
+
+<html>
+<body>
+
+<input type="hidden" id="myInput" name="Girish Raut.">
+<br>br
+
+<p>Click the button to display the value of the name attribute of the hidden input field.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myInput").name;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
+</html>

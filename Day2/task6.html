@@ -1,0 +1,23 @@
+Create two text boxes and a button , 
+on button click it should copy data from one text box to another
+
+<html>
+    <body>
+        <br><br>
+        <input type="text"  id="text1"> 
+        <input type="text"  id="text2" value="">
+        <br><br>
+        <button onclick="copy()">Click to copy</button>
+        <script>
+            function copy()
+            {
+                var a=document.getElementById("text1").value;
+                var b=document.getElementById("text2").value;
+                document.getElementById("text1").value=b;
+                document.getElementById("text2").value=a;
+            }
+            
+        </script>
+
+    </body>
+</html>

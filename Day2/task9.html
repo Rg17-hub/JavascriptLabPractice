@@ -1,0 +1,24 @@
+Declare a string having an email Id and check if @ is there in the string or not
+
+<html>
+    <body>
+        <br><br>
+        Add Email: <input type="text" name="" id="txt1">
+        <br><br>
+        <button onclick="check()">Click for validation</button>
+        <br><br>
+        <p id="ans"></p>
+        <script>
+            function check()
+            {
+                var x=document.getElementById("txt1").value;
+                var y=x.indexOf("@");
+                if(y==-1)
+                document.getElementById("ans").innerHTML="Invalid Email!!!"
+                else
+                document.getElementById("ans").innerHTML="Valid Email:)";
+
+            }
+        </script>
+    </body>
+</html>

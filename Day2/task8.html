@@ -1,0 +1,36 @@
+Create an array having 5 names and display it in descending order
+<html>
+    <body>
+        Your Array=
+        <p id="demo"></p>
+        <br>
+        <br>
+        <button onclick="changeOrder()">Click to arrange in descending order</button>
+        <br><br>
+        After arranging in descending order=
+        <br>
+        <br>
+        <p id="demo1"></p>
+        
+        <script>
+            var count = prompt("Enter array size=");
+            var arr=[];
+            
+            for(let i=0;i<count;i++)
+            {
+                arr[i]=prompt("Enter Name=");
+               document.getElementById("demo").innerHTML=arr;
+            }
+           
+            function changeOrder()
+            {
+                var result = arr.reverse();
+            document.getElementById("demo1").innerHTML=result;
+
+            }
+            
+            
+            
+        </script>
+    </body>
+</html>

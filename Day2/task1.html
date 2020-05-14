@@ -1,0 +1,23 @@
+<html>
+    <body>
+       Max Number From entered array= 
+       <p id="demo"></p>
+        <br>
+        Array element=
+        <script>
+            var count = prompt("Enter array size=");
+            var arr=[];
+            
+            for(let i=0;i<count;i++)
+            {
+                arr[i]=prompt("Enter array element=");
+                document.write("<br>" +arr[i] + "<br>");
+            }
+           
+            
+            var result = Math.max.apply(null, arr);
+            document.getElementById("demo").innerHTML=result;
+            
+        </script>
+    </body>
+</html>
