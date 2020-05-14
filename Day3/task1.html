@@ -1,0 +1,28 @@
+task 1: Using arrow function, print factorial of a number
+<html>
+    <body>
+        <br><br>
+        <label >Enter a Number:</label>
+        <input type="number" name="" id="fct">
+        <br><br>    
+        <button onclick="fact(document.getElementById('fct').value)">Click Here</button>
+        <br><br>
+        factorialof entered number=
+        <br><br>
+
+        <p id="demo"></p>
+        <script>
+            
+          var  fact =(x)   =>
+            {
+                var ft=1;   
+                for (var i=x;i>=2;i--)
+                {
+                    ft*=i;
+                   
+                }
+                document.getElementById("demo").innerHTML=ft;
+            }
+        </script>
+    </body>
+</html>

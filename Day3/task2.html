@@ -1,0 +1,44 @@
+task 2:Create class Account having property name, balance. 
+Write method deposit whose job is to increase balance with the amount deposited by user. 
+Create two objects and call deposit method. Write method display which will display
+name and balance 
+
+<html>
+    <body>
+        <br><br><br>
+            
+        <p id="demo"></p>
+        <br><br>
+        <p id= "demo1"></p>
+        <script>
+            class Account
+            {
+                
+                constructor(name1, balance)
+                {
+                    this.userName=name1;
+                    this.Balance=balance;
+                    this.amount=0;
+                }
+                deposit(balance)
+                {
+                    this.Balance= Balance + amount;
+                }
+
+                display()
+            {
+                return "Name:" + this. userName + " <br> Balance:" + this.Balance;
+            }
+            }
+
+            
+
+            myAccount= new Account("Girish", 100000);
+            myAccount1= new Account("Purva", 500000);
+            //myAccount1.deposit();
+            document.getElementById("demo").innerHTML=myAccount.display();
+            document.getElementById("demo1").innerHTML=myAccount1.display();
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+task 3: Create class math having two static methods, cube and square, 
+whose job is to return the square and cube of a number
+
+<html>
+    <body>
+        <br><br><br>
+        Enter a Number=
+        <input type="number" id ="num">
+        <br>
+        <button onclick="math.square()">Suqre</button>
+        <button onclick="math.cube()">Cube</button>
+        <br><br>
+        <p id="sqr"></p>
+        <br><br> 
+        <p id="cube"></p>
+        <script>
+            class math
+            {
+                
+                static cube()
+                {
+                    var number1=document.getElementById("num").value;
+                    number1= number1*number1*number1;
+                    document.getElementById("cube").innerHTML=number1;
+                }
+
+                static square()
+                {   var number1=document.getElementById("num").value;
+                    number1= number1*number1;
+                    document.getElementById("sqr").innerHTML=number1;
+                }
+            }
+
+            
+        </script>
+    </body>
+</html>
