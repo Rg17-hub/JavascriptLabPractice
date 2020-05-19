@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Form Validation</h1>
+
+    <form name = "myForm" action="check.html" onsubmit="return validateForm()">
+        
+        User Id:  <input type="text"  id="uid"  required><br> <br>
+
+        Password: <input type="password" id="password" required><br> <br>
+        
+        Mobile:   <input type="number" id="mob" required><br><br>
+
+        Address:  <input type="text" id="add" size="100" required><br><br>
+
+        Age:      <input type="number" id="age"  min="18" max="100" required><br><br>
+
+        <input type="submit" id="Submit">
+    
+    </form>
+
+
+    <script>
+        function validateForm()
+        {
+            var id= document.getElementById("uid").value;
+            var a= document.getElementById("password").value;
+            var mob = document.getElementById("mob").value;
+
+            if((id.length<3 || id.length>15))
+            {
+                alert("Invalid User ID!!!");
+                return false;
+            }
+            
+
+            else if(a.length < 8)      
+            {
+                alert("Password must be minimum 8 characters!!!");
+                return false;
+            }        
+                                 
+            else if(mob.length!=10)
+            {
+                alert("Mobile must be a 10 digit number");
+                return false;
+            }
+           
+
+            else
+
+             return true;
+            
+
+        }
+
+       </script>
+</body>
+</html>
