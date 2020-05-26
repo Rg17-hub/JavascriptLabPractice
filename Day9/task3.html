@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br><br>
+    Enter Arguments: <input type="number" id="num">
+    <br><br>
+    <button onclick="add()">Add</button> <button onclick="sum()">Submit</button>
+    <p id="val"></p><br>
+    SUM of array elements=<p id="res"></p>
+    <script>
+        var array= Array();
+        var x=0;
+        function add()
+        {
+            array[x]= document.getElementById("num").value;
+            alert("Element: " + array[x] + " Added at index " + x);
+            x++;
+            document.getElementById("num").value="";
+            
+        }
+
+        function sum()
+        {
+            var e = "<hr/>"; 
+            var total=0;
+            for(var i=0;i<array.length;i++)
+            {
+                array[i] = parseInt(array[i], 10);
+            }
+            for(var i=0;i<array.length;i++)
+            {
+                e += "Element " + i + " = " + array[i] + "<br/>";
+             total=total+array[i];
+            }
+
+             
+             document.getElementById("val").innerHTML=e;
+             document.getElementById("res").innerHTML=total;
+        }
+
+    </script>
+</body>
+</html>
