@@ -1,0 +1,64 @@
+• Create class Employee which has instance member id, name , salary, net salary. 
+Also Write getter setter for each instance member. Write calculate net salary function 
+whose job is to calculate net salary after deduction of 10 % TDS. 
+Create 2 objects of the class and call method.
+<html>
+    <body>
+        <br><br><br>
+        Enter Employee Id: <input type="number" id="id" required><br><br>
+        Enter Employee Name: <input type="text"  id="name" required><br><br>
+        Enter Employee Salary: <input type="number" id="sal" required><br><br>
+        <button onclick="fun()">Click Here</button>
+        <p id="result"></p>
+        <script>
+            function fun()
+            {
+                class Employee
+        {
+            set empid(id)
+            {
+                this.id=id;
+            }
+            set empname(name)
+            {
+                this.name=name;
+            }
+            set empsalary(salary)
+            {
+                this.salary=salary;
+            }
+            get empid()
+            {
+                return this.id;
+            }
+            get empname()
+            {
+                return this.name;
+            }
+            get empsalary()
+            {
+                return this.salary;
+            }
+        
+            calculateNetSalary()
+            {
+                return this.salary * 0.9;
+            }
+        }
+        
+        var obj1= new Employee();
+        obj1.id= document.getElementById("id").value;
+        obj1.name=document.getElementById("name").value;
+        obj1.salary= Number(document.getElementById("sal").value);
+
+        document.getElementById("result").innerHTML=
+        "Employee ID:"+ obj1.id +"<br>"+ "Employee Name:" +obj1.name+"<br>"+
+        "Employee Salary:"+ obj1.salary +"<br><br>" + "Net Salary:" + obj1.calculateNetSalary(); 
+
+            }
+            
+        
+        </script>
+        
+    </body>
+</html>
