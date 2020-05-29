@@ -1,0 +1,28 @@
+• Create text box and a span tag , on change it should give error if user keeps text box empty.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br><br><br>
+    <input type="text" onchange="fun()" id="txt"> 
+    <span id="spn" style="color: blueviolet;"></span>
+    <script>
+        function fun()
+        {
+            
+            var x= document.getElementById("txt").value;
+            if(x.length=="")
+            {
+                alert("Please Enter text!!!");
+                return false;
+            }
+            document.getElementById("spn").innerHTML=x;
+        }
+    </script>
+</body>
+</html>

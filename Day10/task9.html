@@ -1,0 +1,24 @@
+• Create a textbox ,and a span tag, 
+on change event on text box it should display data entered in text box 
+in span tag which is next to it text box.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br><br><br>
+    <input type="text" onchange="fun()" id="txt"> 
+    <span id="spn" style="color: blueviolet;"></span>
+    <script>
+        function fun()
+        {
+            var x= document.getElementById("txt").value;
+            document.getElementById("spn").innerHTML=x;
+        }
+    </script>
+</body>
+</html>

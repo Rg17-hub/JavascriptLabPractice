@@ -1,0 +1,32 @@
+• Write your friends name using OL tag. 
+Create a button whose job is to delete the 1st name from the OL tag.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br><br><br>
+    <ol >
+        <li id="myList">Yugandhar</li>
+        <li>Akash</li>
+        <li>Pratik</li>
+        <li>Sandeep</li>
+        <li>Ravi</li>
+    </ol>
+
+    <br>
+        <button onclick="fun()">click Here</button>
+
+        <script>
+            function fun()
+            {
+                var list= document.getElementById("myList");
+                list.parentNode.removeChild(list);
+            }
+        </script>
+</body>
+</html>

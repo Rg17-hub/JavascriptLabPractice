@@ -1,0 +1,36 @@
+Create three check boxes showing book name and price. Create a text box. 
+As per selection of check box , text box should show total of selected price.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <br><br><br>
+    <p>Select the book/(s) you'd like to purchase:</p>
+    <input type="checkbox" name="calval[]" value="352" onclick="calculatePrice()">Kitne Pakistan - Rs.352.00/-
+    <br>
+    <input type="checkbox" name="calval[]" value="600" onclick="calculatePrice()">Chitralekha - Rs.600.00/-
+    <br>
+    <input type="checkbox" name="calval[]" value="960" onclick="calculatePrice()">Yayati - Rs.960.00/-
+    <br><br>
+    Total: <input type="text" name="" id="total">
+    <script>
+        function calculatePrice()
+        {
+            var price=0;
+            var chbx= document.querySelectorAll("[name='calval[]']:checked");
+
+            for(let i=0;i<chbx.length;i++)
+            {
+                price +=  parseInt(chbx[i].value,10);
+            }
+
+            document.getElementById("total").value=price;
+        }
+    </script>
+</body>
+</html>

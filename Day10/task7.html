@@ -1,0 +1,33 @@
+• Write at least 3 paragraph about yourself. 
+Create a button on click it should count number of p tags used in document. 
+Also give blue background colour to all p tags.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br><br><br>
+    <p id="one" >My Name Is Girish</p>
+    <p id="two">I'm from Solapur</p>
+    <p id="three">Right now I'm in Mumbai!</p>
+    <br>
+    <br>
+    <button onclick="fun()">Click here</button>
+    <script>
+        function fun()
+        {
+            var count=document.getElementsByTagName("p").length
+            alert("Number of tags=" +count);
+            for (let i=0;i<count;i++)
+            {
+                document.getElementsByTagName("p")[i].style.color="blue";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+• Create text box and a span tag  ask user to enter password . Rules for password are
+o It must have at least one capital character
+o It must have at least one digit
+o It must have at least 1 special symbol
+On change event it should display appropriate error message
+For example if user enters “Vita” error should be "please use one digit  use one symbol."
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br><br><br>
+    Enter Password: <input type="text" onchange="check()" id="txt">
+    <span id="spn"></span>
+    <br>
+    <script>
+        function check()
+        {
+            var pass=document.getElementById("txt").value;
+            var caps= /[A-Z]/;
+            var digit= /[0-9]/;
+            var splsym=/[#?!@$%^&*-]/
+            var count=0;
+            if(!caps.test(pass))
+            {
+                document.getElementById("spn").innerHTML="Please Enter atleast one capital letter!";
+                count=1;
+                document.getElementById("spn").style.color="red";
+
+            }
+            if(!digit.test(pass))
+            {
+                document.getElementById("spn").innerHTML="Please Enter atleast one digit!";
+                count=1;
+                document.getElementById("spn").style.color="red";
+
+            }
+            if(!splsym.test(pass))
+            {
+                document.getElementById("spn").innerHTML="Please Enter atleast one Special Character!";
+                count=1;
+                document.getElementById("spn").style.color="red";
+
+            }
+
+            if(count==0)
+            {
+                document.getElementById("spn").innerHTML="Password Accepted:)";
+                document.getElementById("spn").style.color="green";
+                return true;
+
+            }
+
+         
+
+
+        }
+    </script>
+</body>
+</html>
