@@ -1,0 +1,26 @@
+• Write a program to display a digital clock
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+</head>
+<body>
+    <br><br><br>
+    <center>
+        <h1 id="clock" style="color: blue;"></h1>
+        <button onclick="setInterval(digiClock, 1000)" id="but">Click to display Digital clock</button>
+    </center>
+
+    <script>
+        function digiClock()
+        {
+            document.getElementById("but").disabled=true;
+            var d= new Date();
+            document.getElementById("clock").innerHTML=d.toLocaleTimeString();
+        }
+    </script>
+</body>
+</html>

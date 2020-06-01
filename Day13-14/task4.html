@@ -1,0 +1,39 @@
+• Create a text box and two buttons ‘create cookie and read cookie.’ 
+When user enters data in a text box and clicks on button create cookie it should store 
+data in cookie. 
+When user clicks on button read cookie it should display cookie data on the page.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie</title>
+</head>
+<body>
+    <br><br><br>
+    <center>
+        <input type="text" name="txt" id="txt"><br><br>
+        <button onclick="createCookie(txt.value)">Create Cookie</button> &nbsp;
+        <button onclick="readCookie()">Read Cookie</button>
+
+        <h2 id="demo"></h2>
+
+    </center>
+
+    <script>
+       // var ip = document.getElementById("txt").value;
+        function createCookie(userip)
+        {
+            
+            document.cookie = "myName = " +userip+";";
+        }
+
+        function readCookie()
+        {
+            
+            alert(document.cookie);
+        }
+    </script>
+</body>
+</html>
