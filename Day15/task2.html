@@ -1,0 +1,36 @@
+2. Create a paragraph, write 5 line about you. on mouse over hide paragraph and on mouse out show paragraph
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide & show</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+
+</head>
+<body>
+    <br><br><br>
+    <center>
+        <p>My Name is Girish Raut.</p>
+        <p>I played Cricket at National level.</p>
+        <p>Cricket is my passion.</p>
+        <p>Currently I live in Mumbai.</p>
+        <p>Team India is my favourite team.</p>
+    </center>
+
+    <script>
+        $(document).ready(function()
+        {
+            $("p").mouseenter(function()
+            {
+                $(this).hide();
+            });
+            $("p").mouseleave(function()
+            {
+                $(this).show();
+            });
+        });
+    </script>
+</body>
+</html>

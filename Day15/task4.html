@@ -1,0 +1,27 @@
+4. Create a text box, on blur give grey color to textbox
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task4</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <br><br><br>    
+    <center>
+        Enter Here:<input type="text" name="" id="txt">
+    </center>
+
+    <script>
+        $(document).ready(function()
+        {
+            $("input").blur(function()
+            {
+                $(this).css("background-color", "grey");
+            });
+        });
+    </script>
+</body>
+</html>

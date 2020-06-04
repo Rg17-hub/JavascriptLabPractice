@@ -1,0 +1,27 @@
+5. Create a text box when you type in it the color of text should be green
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task5</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <br><br><br>
+    <center>
+        Enter here: <input type="text" name="" id="txt">
+    </center>
+    <script>
+        $(document).ready(function()
+        {
+            $("input").focus(function()
+            {
+                $(this).css("color", "green");
+            });
+        });
+    </script>
+</body>
+</html>

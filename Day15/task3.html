@@ -1,0 +1,29 @@
+3. Write your name in h1 tag with blue color on mouse enter it should display red border around it.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task3</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+
+</head>
+<body>
+    <br><br><br>
+    <center>
+        <h1 style="color: blue;" id="h1">Girish Raut.</h1>
+        
+    </center>
+
+
+    <script>
+        $(document).ready(function()
+        {
+            $("h1").mouseenter(function()
+            {
+                document.getElementById("h1").style.backgroundColor= "red";
+            });
+        });
+    </script>
+</body>
+</html>
