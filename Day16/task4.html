@@ -1,0 +1,35 @@
+4. Create image on page on button click size of image will slowly increase
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Animation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <br>    <br><br>
+    <center>
+        <img src="hulk.jpg" alt="">
+        <button>Click Me</button>
+    </center>
+
+    <script>
+        $(document).ready(function()
+        {
+            $("button").click(function()
+            {
+                $("img").animate(
+                    {
+                        height: "500px",
+                        width: "1000px"
+                    }
+                );
+            });
+        });
+    </script>
+</body>
+</html>
